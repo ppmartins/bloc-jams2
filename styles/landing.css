@@ -31,10 +31,20 @@ body.landing {
   position: relative;
 }
 
-.point {
+.point {     /* CSS animatable properties: https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_animated_properties */
   position: relative;
   padding: 2rem;
   text-align: center;
+  opacity: 0;
+  -webkit-transform: scaleX(0.9) translateY(3rem); /* We're using  scaleX(x) to scale the element to 90% of its width. We're also using translateY(y) to to move the element 3rem down from its normal position. */
+  -moz-transform: scaleX(0.9) translateY(3rem);
+  transform: scaleX(0.9) translateY(3rem);
+  -webkit-transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -webkit-transition-delay: 0.2s;
+  -moz-transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .point .point-title {
